@@ -17,6 +17,11 @@ export const MainContainer = styled.div`
       ), url(${bg});
     background-size: cover;
     background-repeat: no-repeat; 
+
+    @media(max-width: 769px){
+        min-height: 100vh;
+        height: 100%;
+    }
 `;
 
 export const TitleContainer = styled.div`
@@ -26,6 +31,14 @@ export const TitleContainer = styled.div`
     font-size: 9rem;
     font-weight: 900;
     font-family: "VT323", monospace;
+    @media(max-width: 769px){
+        font-size: 6rem;
+    }
+    @media(max-width: 496px){
+        font-size: 7rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
 
 `
 export const Subtitle = styled.p`
@@ -36,6 +49,14 @@ export const Subtitle = styled.p`
     font-weight: bolder;
     margin: 0;
     animation: slow .9s 1 0s ease;
+
+    @media(max-width: 769px){
+        font-size: 1.5rem;
+    }
+
+    @media(max-width: 496px){
+        font-size: 1.2rem;
+    }
     
     @keyframes slow{
         0%{
@@ -61,6 +82,12 @@ export const Quote = styled.p`
     margin-bottom: 6em;
     margin-top: 3em;
     animation: slow .9s 1 0s ease;
+
+    @media(max-width: 769px){
+        padding: 0 3rem;
+        margin-bottom: 3em;
+    }
+    
 
     @keyframes slow{
         0%{
@@ -90,6 +117,9 @@ export const Button = styled.div`
     text-shadow: 2px 2px #00bfa8;
     animation: slow .9s 1 0s ease;
 
+    @media(max-width: 496px){
+        margin-bottom: 1rem;
+    }
     :hover{
     cursor: pointer;
     color: #3f1942;
