@@ -7,6 +7,7 @@ export const MainContainer = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
     background: radial-gradient(
         circle at bottom,
         rgb(139, 0, 91, 0.9),
@@ -48,7 +49,6 @@ export const Subtitle = styled.p`
     text-shadow: 2px 2px #d90474;
     font-weight: bolder;
     margin: 0;
-    animation: slow .9s 1 0s ease;
 
     @media(max-width: 769px){
         font-size: 1.5rem;
@@ -57,8 +57,14 @@ export const Subtitle = styled.p`
     @media(max-width: 496px){
         font-size: 1.2rem;
     }
-    
-    @keyframes slow{
+
+`;
+export const Content = styled.div`
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+   animation: slow .9s 1 0s ease;
+   @keyframes slow{
         0%{
         opacity: 0;
         }
@@ -72,37 +78,24 @@ export const Subtitle = styled.p`
             opacity: 0.8;
         }
     }
-
-`
+`;
 export const Quote = styled.p`
     font-family: "Space Mono", monospace;
     text-align: center;
     color: #008b68;
     text-shadow: none;
-    margin-bottom: 6em;
+    margin-bottom: 3em;
     margin-top: 3em;
-    animation: slow .9s 1 0s ease;
 
     @media(max-width: 769px){
         padding: 0 3rem;
-        margin-bottom: 3em;
     }
     
-
-    @keyframes slow{
-        0%{
-        opacity: 0;
-        }
-        70%{
-            opacity: 0.3;
-        }
-        80%{
-            opacity: 0.5;
-        }
-        90%{
-            opacity: 0.8;
-        }
+    @media(max-width: 375px){
+        margin-bottom: 1em;
+        font-size: 12px;
     }
+    
 `
 export const Button = styled.div`
     padding: 1.5rem;
@@ -115,7 +108,6 @@ export const Button = styled.div`
     text-decoration: none;
     font-family: VT323,monospace;
     text-shadow: 2px 2px #00bfa8;
-    animation: slow .9s 1 0s ease;
 
     @media(max-width: 496px){
         margin-bottom: 1rem;
@@ -131,19 +123,87 @@ export const Button = styled.div`
       #deed63,
       #d9ff74
     );
-
-    @keyframes slow{
-        0%{
-        opacity: 0;
-        }
-        70%{
-            opacity: 0.3;
-        }
-        80%{
-            opacity: 0.5;
-        }
-        90%{
-            opacity: 0.8;
-        }
   }
 `
+
+export const IconsContainer = styled.div`
+  display: flex;
+`
+export const IconContainer = styled.a`
+  opacity: 0.7;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  
+  :hover {
+      opacity: 1;
+      animation: hover 1s 1 0s ease-out;
+      @keyframes hover{
+        0%{
+            transform: translateY(-15px);
+        }
+        100%{
+            transform: translateY(-15px);
+        }
+    }
+  }
+`
+export const ShakeEffect = styled.div`
+    font-family: "VT323", monospace;
+    color: #d90474;
+    text-shadow: 2px 2px #00bfa8;
+  
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #7794ff, #44107a, #ff1361, #fff800);
+    -webkit-animation: 0.8s shake infinite alternate;
+    animation: 0.8s shake infinite alternate;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: skewX(-15deg);
+    }
+    5% {
+      transform: skewX(15deg);
+    }
+    10% {
+      transform: skewX(-15deg);
+    }
+    15% {
+      transform: skewX(15deg);
+    }
+    20% {
+      transform: skewX(0deg);
+    }
+    100% {
+      transform: skewX(0deg);
+    }
+`;
+export const AboutMeContainer = styled.div`
+    display: flex;
+    align-items: baseline;
+    margin-top: 60px;
+
+    @media(max-width: 375px){
+        margin-top: 15px;
+    }
+`;
+export const AboutMe = styled.p`
+    font-size: 16px;
+    font-family: "Space Mono",monospace;
+    color: #e3b943;
+    margin: 0 10px;
+    cursor: pointer;
+`;
