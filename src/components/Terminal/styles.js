@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-  width: 60vh;
-  max-width: 555px;
+  width: 70vh;
+  max-width: 630px;
   display: flex;
   flex-direction: column;
   background-color: #18181C;
@@ -17,8 +17,8 @@ export const MainContainer = styled.div`
     height: unset;
   }
 
-  @media(max-width: 320px){
-    top: 20%;
+  @media(max-width: 375px){
+    top: 5%;
   }
 `;
 export const Tab = styled.div`
@@ -39,5 +39,9 @@ export const TabIcons = styled.div`
   }
 `;
 export const BodyContainer = styled.div`
-  padding: 15px 30px;
+  padding: 30px 45px;
+
+  @media(max-width: 320px){
+    padding: 25px;
+  }
 `
