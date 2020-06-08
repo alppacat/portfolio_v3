@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 
 import Terminal from "../../components/Terminal";
@@ -65,7 +65,11 @@ function HomePage() {
           {/* <Button>PRESS TO ENTER</Button> */}
           <IconsContainer>
             <ContentIcons>
-              <a href="https://www.linkedin.com/in/tzupratts/" target="_blank" rel="noopener noreferrer" >
+              <a
+                href="https://www.linkedin.com/in/tzupratts/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Parragraph>LinkedIn</Parragraph>
               </a>
               <IconContainer className="hover">
@@ -78,18 +82,21 @@ function HomePage() {
               </IconContainer>
             </ContentIcons>
             <ContentIcons>
-                <a href="" rel="noopener noreferrer" >
+              <a href="" rel="noopener noreferrer">
                 <Parragraph>Resume</Parragraph>
-                </a>
+              </a>
               <IconContainer className="hover">
                 <img src={Resume} alt="Resume" />
               </IconContainer>
             </ContentIcons>
             <ContentIcons>
-                <a href="https://github.com/alppacat"
-                  target="_blank" rel="noopener noreferrer" >
-                    <Parragraph>Github</Parragraph>
-                </a>
+              <a
+                href="https://github.com/alppacat"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Parragraph>Github</Parragraph>
+              </a>
               <IconContainer className="hover">
                 <img
                   href="https://github.com/alppacat"
